@@ -1,0 +1,34 @@
+navigation-menu ul{
+    margin:0px;
+    padding:0px;
+}
+#ul-nb li a{
+    text-align: center;
+    padding: 1px;
+    width: 1px;
+}
+ul{
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(4, 0, 249);
+}
+li{
+    float: inline-start;
+}
+li a {
+     display: inline-block;
+     color: rgb(254, 254, 254);
+     text-align: center;
+     padding: 5px 10px;
+     text-decoration: dotted;
+}
+li a:hover{
+    background-color: rgb(176, 114, 175);
+}
+#navigation ul li{
+    display: inline;
+    color: rgb(225, 133, 13);
+}
+#navigation li:not(:first-child):before{
+    content: " || ";
+}

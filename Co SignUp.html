@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign-Up</title>
+    <style>
+        body,
+        h1,
+        h2,
+        table,
+        button {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('clouds.jpg');
+            background-repeat: no-repeat;
+            background-size: 1980px1050px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .myform {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        td {
+            display: inline-table;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .signup-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .address {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        .home-page {
+            margin-top: 10px;
+        }
+
+        .home-page a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .home-page a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .login-link {
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <div class="signup-container">
+            <h1>Create an Account</h1>
+            <form action="" id="myform" name="f1">
+                <table class="form-group">
+                    <tr>
+                        <td>Enter your Name</td>
+                        <td> <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter your password</td>
+                        <td> <input type="password" value="" id="pwd" placeholder="Enter a strong password" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Re-Enter the password </td>
+                        <td> <input type="password" value="" id="re_pwd" placeholder="Re-Enter the above Password"
+                                onblur="password();" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Enter your Email Id</td>
+                        <td><input type="text" id="Email" placeholder="Enter your email address" required></td>
+                    </tr>
+                    <tr>
+                        <td>Enter your Address</td>
+                        <td><textarea name="address" id="address" cols="30" rows="5"
+                                placeholder="Enter your Full Address"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="radio" name="" id="" value="Male">Male</td>
+                        <td><input type="radio" name="" id="" value="Female">Female</td>
+                        <td><input type="radio" name="" id="" value="Other">Other</td>
+                    </tr>
+                    <tr>
+                        <td>Academic Details</td>
+                        <td><select name="" id="">
+                            <option value="">Class 8-10</option>
+                            <option value="">Class 11-12</option>
+                            <option value="">Graduation</option>
+                            <option value="">Post-Graduation</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td>
+                            <input type="radio" name="b" value="JAPAN" onclick="check(this.value)">japan <br>
+                            <input type="radio" name="b" value="Autralia" onclick="check(this.value)">Autralia <br>
+                            <input type="radio" name="b" value="Thailand" onclick="check(this.value)">Thailand <br>
+                            <input type="radio" name="b" value="SINGAPORE" onclick="check(this.value)">Singapore<br>
+                            <input type="radio" name="b" value="INDIA" onclick="check(this.value)">India<br>
+                        </td>
+                        <td> Country Selected: <input type="text" name="countryselected" value="" size="12">
+                        </td>
+                    </tr>
+
+                </table>
+
+                <input type="submit" value="Submit" name="submit" onsubmit="password()">
+                <input type="reset" value="Reset" name="reset" />
+                <button onclick="myFunction" id="conf">Check</button>
+            </form>
+
+            <div class="login-link">
+                Already have an account? <a href="Co Login.html">Login</a>
+            </div>
+            <div class="home-page">
+                Go back to...
+                <a href="CODING.html">Home</a>
+            </div>
+    </center>
+    </div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p>&copy; @2023 Sneha Ghosh.All Rights are reserved.CODE HUB,Sodepur.</p>
+        <div>
+            <p>Contact Us</p>
+            <p>Mob:7003354475</p>
+            <p>Email:codehub.mail@gmail.com</p>
+        </div>
+    </div>
+</footer>
+<script src="Co SignUp.js"></script>
+
+</html>
